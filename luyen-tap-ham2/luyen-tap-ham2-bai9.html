@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dsa</title>
+</head>
+<body>
+    <script>
+        function checkWord () {
+            let array=prompt("Nhập mảng");
+            let word=prompt("Nhập ký tự");
+            let count=0;
+            for (let i=0;i<array.length;i++) {
+                if (word===array[i]) {
+                    count=count+1;
+                }
+            } if (count!==0) {
+                alert(count+ " lần");
+            } else {
+                alert("-1 lần");
+            }
+        }
+        checkWord();
+    </script>
+</body>
+</html>

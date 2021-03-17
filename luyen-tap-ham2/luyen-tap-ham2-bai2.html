@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sda</title>
+</head>
+<body>
+    <script>
+        function acreageCircle (x) {
+            return 3.14*x*x;
+        }
+        function perimeterCircle (y) {
+            return 2*3.14*y;
+        }
+
+        let a=prompt("Nhập bán kính đường tròn");
+        a=parseInt(a);
+        let acreage = acreageCircle(a);
+        document.write("Diện tích hình tròn = " +acreage+ "<br/>" )
+        let perimeter = perimeterCircle(a);
+        document.write("Chu vi hình tròn = " +perimeter);
+    </script>
+</body>
+</html>
