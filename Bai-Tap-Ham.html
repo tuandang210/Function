@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitapham</title>
+</head>
+<body>
+
+</body>
+</html>
+    <script>
+            //Bai 1
+            function getLength() {
+                let array = [];
+                let length = prompt("Nhập độ dài mảng");
+                length = parseInt(length);
+                for (let i = 0; i < length; i++) {
+                    array[i] = parseInt(prompt("Nhập phần tử của mảng"));
+                }
+                document.write("Độ dài chuỗi là " + array.length)
+            }
+
+            //Bai 2
+            function getAvg() {
+                let array = [];
+                let length = prompt("Nhập độ dài mảng");
+                length = parseInt(length);
+                for (let i = 0; i < length; i++) {
+                    array[i] = parseInt(prompt("Nhập phần tử của mảng"));
+                }
+                let total = 0;
+                let avg;
+                for (let i = 0; i < array.length; i++) {
+                    total += array[i];
+                }
+                avg = total / array.length;
+                alert("Trung bình = " +avg);
+            }
+
+            //Bai 3
+            function getMaxMin() {
+                let array = [];
+                let length = prompt("Nhập độ dài mảng");
+                length = parseInt(length);
+                for (let i = 0; i < length; i++) {
+                    array[i] = parseInt(prompt("Nhập phần tử của mảng"));
+                }
+                let min = array[0];
+                let max = array[0];
+                for (let i = 0; i < array.length; i++) {
+                    if (min > array[i]) {
+                        min = array[i];
+                    }
+                    if (max < array[i]) {
+                        max = array[i];
+                    }
+                }
+                alert("Min = " + min + " Max = " + max);
+            }
+
+            //Bai 4
+            function calculator() {
+                let a=parseInt(prompt("Nhập số thứ nhất:"));
+                let b=parseInt(prompt("Nhập số thứ hai"));
+                let operation=prompt("Nhập phép toán +,-,*,/");
+                if (operation === "+") {
+                    alert("Tổng = " + (a+b));
+                } else if (operation=== "-") {
+                    alert("Hiệu = " + (a-b));
+                } else if (operation === "*") {
+                    alert("Tích = " + (a*b));
+                } else if (operation === "/") {
+                    alert("Thương = " +(a/b));
+                } else {
+                    alert("Không thực hiện được phép toán đó");
+                }
+            }
+
+            //Bai 5
+            function isInt () {
+                let a = prompt("Nhập số cần kiểm tra");
+                if (a == parseInt(a)) {
+                    alert(a + " là số nguyên");
+                } else {
+                    alert(a + " không phải là số nguyên")
+                }
+            }
+
+            //Bai 6
+            function sayHi() {
+                let a=prompt("Nhập tên của bạn");
+                alert("Xin chào " + a);
+            }
+
+            //Bai 7
+            function addElement () {
+                let array=[];
+                array.push(prompt("Nhập element"));
+                console.log(array);
+            }
+
+            //Bai 8
+            function delElement () {
+                let array=[1,2,5,6,9];
+                let a=parseInt(prompt("Nhập vị trí cần xóa"));
+                let b=parseInt(prompt("Nhập số lượng element cần xóa"))
+                if ((a<array.length)&&(b<(array.length-a))) {
+                array.splice(a,b);
+                } else {
+                    alert("Lỗi")
+                }
+                console.log(array);
+            }
+
+            //Bai 9
+            function findElement () {
+                let array=[1,2,5,6,9];
+                let index = -1;
+                let a=parseInt(prompt("Nhập số cần tìm"));
+                for (let i=0; i<array.length; i++) {
+                    if (a === array[i]) {
+                        index=i;
+                    }
+                }
+                if (index!==-1) {
+                    alert("Số cần tìm ở vị trí " +array.indexOf(a) );
+                } else {
+                    alert("Không tìm được số trong mảng");
+                }
+            }
+
+            //Bai 10
+            function countNumber(){
+                let arr=[1,2,4,4,4,4,2,2,6,6,8,9];
+                let str=[];
+                for (let i = 0;i<arr.length;i++){
+                    for(let j =i+1;j<arr.length;j++){
+                        if(arr[i]===arr[j]){
+                            if(str.length===0){
+                                str[0]=arr[i];
+                            }else {
+                                let check=0;
+                                for (let k=0;k<str.length;k++){
+                                    if(str[k]===arr[j]){
+                                        check=1;
+                                    }
+                                }
+                                if(check===0){
+                                    str.push(arr[i])
+                                }
+                            }
+                        }
+                    }
+                } alert(str)
+            }
+    </script>
